@@ -1,0 +1,19 @@
+SELECT
+    u.id_uso,
+    u.id_cliente,
+    u.fecha_uso,
+    u.datos_descarga_gb,
+    u.datos_subida_gb,
+    u.datos_totales_gb,
+    u.minutos_voz,
+    u.minutos_internacionales,
+    u.cantidad_sms,
+    u.horas_streaming,
+    u.uso_pico_gb,
+    u.uso_valle_gb,
+    u.cantidad_sesiones,
+    u.promedio_minutos_sesion,
+    u.region,
+    u.segmento_cliente,
+    u.churn
+FROM {{ ref('int_uso_consumo') }} u

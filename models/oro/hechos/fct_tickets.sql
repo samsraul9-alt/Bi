@@ -1,0 +1,20 @@
+SELECT
+    t.id_ticket,
+    t.id_cliente,
+    t.fecha_creacion,
+    t.fecha_resolucion,
+    t.canal,
+    t.categoria,
+    t.motivo,
+    t.prioridad,
+    t.estado,
+    t.minutos_resolucion,
+    t.resolucion_primer_contacto,
+    t.puntaje_satisfaccion,
+    t.equipo_agente,
+    t.reabierto,
+    t.cantidad_interacciones,
+    t.region,
+    t.segmento_cliente,
+    t.churn
+FROM {{ ref('int_tickets_soporte') }} t

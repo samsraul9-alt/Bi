@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: postgres
+    database: AIRBYTE_DATABASE
+    schema: POSTGRES
+    tables:
+      - name: crm_clientes
+      - name: contrataciones_suscripciones
+      - name: facturacion
+      - name: pagos
+      - name: uso_consumo
+
+  - name: mysql
+    database: AIRBYTE_DATABASE
+    schema: MYSQL
+    tables:
+      - name: campanas_retencion
+      - name: campanas_maestro
+      - name: catalogo_planes
+
+  - name: mongodb
+    database: AIRBYTE_DATABASE
+    schema: MONGODB
+    tables:
+      - name: eventos_red
+      - name: soporte_tickets
+
+  - name: sheets
+    database: AIRBYTE_DATABASE
+    schema: GOOGLE_SHEET
+    tables:
+      - name: etiquetas_churn
+      - name: macro_mensual
+      - name: metas_retencion_region_mes
+      - name: metas_kpis_globales
+      - name: calendario_festivos_campanas

@@ -1,0 +1,20 @@
+SELECT
+    f.id_factura,
+    f.id_cliente,
+    f.id_suscripcion,
+    f.periodo_facturacion,
+    f.fecha_emision,
+    f.fecha_vencimiento,
+    f.cargo_base_bob,
+    f.cargo_uso_extra_bob,
+    f.cargo_equipo_bob,
+    f.descuento_bob,
+    f.impuesto_bob,
+    f.monto_total_bob,
+    f.estado_factura,
+    f.region,
+    f.segmento_cliente,
+    f.nombre_plan,
+    f.nivel_plan,
+    f.churn
+FROM {{ ref('int_facturacion') }} f

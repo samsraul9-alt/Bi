@@ -1,0 +1,21 @@
+SELECT
+    id_factura,
+    id_cuenta,
+    id_cliente,
+    id_suscripcion,
+    periodo_facturacion,
+    fecha_emision,
+    fecha_vencimiento,
+    cargo_base_bob,
+    cargo_uso_extra_bob,
+    cargo_equipo_bob,
+    cargo_servicios_bob,
+    descuento_bob,
+    impuesto_bob,
+    monto_total_bob,
+    monto_mes_anterior_bob,
+    variacion_monto_bob,
+    variacion_porcentaje,
+    estado_factura,
+    moneda
+FROM {{ source('postgres', 'facturacion') }}

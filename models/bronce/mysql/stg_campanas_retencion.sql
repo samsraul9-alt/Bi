@@ -1,0 +1,21 @@
+SELECT
+    id_interaccion,
+    id_cliente,
+    id_campana,
+    nombre_campana,
+    fecha_contacto,
+    canal,
+    tipo_oferta,
+    descuento_porcentaje,
+    meses_gratis,
+    upgrade_ofrecido,
+    equipo_ofrecido,
+    aceptada,
+    fecha_respuesta,
+    motivo_retencion,
+    retenido_30d,
+    retenido_60d,
+    retenido_90d,
+    costo_campana_bob,
+    valor_estimado_cliente_bob
+FROM {{ source('mysql', 'campanas_retencion') }}

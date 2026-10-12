@@ -1,0 +1,23 @@
+SELECT
+    id_suscripcion,
+    id_cliente,
+    nombre_plan,
+    nivel_plan,
+    tipo_contrato,
+    fecha_inicio_contrato,
+    fecha_fin_contrato,
+    servicio_internet,
+    servicio_telefonia,
+    lineas_multiples,
+    seguridad_online,
+    respaldo_online,
+    proteccion_dispositivo,
+    soporte_tecnico_premium,
+    streaming_tv,
+    streaming_peliculas,
+    precio_mensual_base_bob,
+    facturacion_electronica,
+    estado,
+    plan_anterior,
+    fecha_cambio_plan
+FROM {{ source('postgres', 'contrataciones_suscripciones') }}
